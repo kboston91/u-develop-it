@@ -31,6 +31,18 @@ db.query(`SELECT * FROM candidates`, (err, rows) => {
   console.log(rows);
 });
 
+// GET a single candidate
+db.query(`SELECT * FROM candidates WHERE id = 1`, (err, row) => {
+  if (err) {
+    console.log(err);
+  }
+  console.log(row);
+});
+
+
+
+
+
 //Catchall route
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
